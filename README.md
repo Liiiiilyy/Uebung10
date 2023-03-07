@@ -1,5 +1,3 @@
-# java/Uebung10
-
 ## Lambda Expression
 
 - `(parameters) -> expression`或`(parameters) ->{ statements; }`
@@ -127,3 +125,17 @@ D
     ```
     
      指定一个常量seed，生成从seed到常量f（由UnaryOperator返回的值得到）的流。
+    
+    ```java
+    public static void main(String[] args) {
+        Stream.iterate(0, n -> n + 1).limit(5).forEach(a -> {
+            System.out.println(a);
+        });
+    }
+    
+    0
+    1
+    2
+    3
+    4
+    ```
